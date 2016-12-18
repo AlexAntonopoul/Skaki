@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Your Pawn"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:textColor="@android:color/background_dark"/>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_all"
+        android:layout_gravity="center"
+        >
+
+        <ImageButton
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/whitequeen_black"
+            android:id="@+id/wqueen"
+            />
+        <ImageButton
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/whitetower_black"
+            android:id="@+id/wtower"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            />
+        <ImageButton
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/whitehorse_black"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:id="@+id/whorse"
+            />
+        <ImageButton
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/whiteax_black"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:id="@+id/wax"
+            />
+
+    </LinearLayout>
+</LinearLayout>
