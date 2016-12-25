@@ -1,21 +1,15 @@
-package com.example.alex.skaki;
+package com.chess.alex.skaki;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Handler;
 import android.os.Vibrator;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -327,14 +321,6 @@ public class MainActivity extends AppCompatActivity {
             undostorage();
 
             if (pan[panx][pany]) {
-                /*if(rouab()){
-                    rouakingb=true;
-                    Toast.makeText(this, "Roua Black King", Toast.LENGTH_SHORT).show();
-                }
-                if(rouaw()){
-                    rouakingw=true;
-                    Toast.makeText(this, "Roua White King", Toast.LENGTH_SHORT).show();
-                }*/
                 if (Beforecolor == "white") {
                     if (BeforecolorB == "black") {
                         BeforeID.setBackgroundResource(R.drawable.black);
@@ -379,6 +365,32 @@ public class MainActivity extends AppCompatActivity {
                             v.setBackgroundResource(R.drawable.whiteking_white);
                         } else if (colorB == "black") {
                             v.setBackgroundResource(R.drawable.whiteking_black);
+                        }
+
+                        if ((panx==7)&&(pany==6)&&(Beforepanx==7)&&(Beforepany==4)){
+
+                                undocalc=undocalc+1;
+
+                                undoid[undocalc]=seven_seven;
+                                undopanx[undocalc]=7;
+                                undopany[undocalc]=7;
+                                undoname[undocalc]="wtower";
+                                undodraw[undocalc]=seven_seven.getBackground();
+                                undocolor[undocalc]="white";
+
+                                undocalc=undocalc+1;
+
+                                undoid[undocalc]=seven_five;
+                                undopanx[undocalc]=7;
+                                undopany[undocalc]=5;
+                                undoname[undocalc]="keno";
+                                undodraw[undocalc]=seven_five.getBackground();
+                                undocolor[undocalc]=null;
+
+                            seven_seven.setBackgroundResource(R.drawable.white);
+                            seven_five.setBackgroundResource(R.drawable.whitetower_white);
+                            paname[7][5] = "wtower";
+                            paname[7][7] = "keno";
                         }
                     }
 
@@ -428,6 +440,34 @@ public class MainActivity extends AppCompatActivity {
                         } else if (colorB == "black") {
                             v.setBackgroundResource(R.drawable.blackking_black);
                         }
+
+                        if ((panx==0)&&(pany==6)&&(Beforepanx==0)&&(Beforepany==4)){
+
+                            undocalc=undocalc+1;
+
+                            undoid[undocalc]=zero_seven;
+                            undopanx[undocalc]=0;
+                            undopany[undocalc]=7;
+                            undoname[undocalc]="btower";
+                            undodraw[undocalc]=zero_seven.getBackground();
+                            undocolor[undocalc]="black";
+
+                            undocalc=undocalc+1;
+
+                            undoid[undocalc]=zero_five;
+                            undopanx[undocalc]=0;
+                            undopany[undocalc]=5;
+                            undoname[undocalc]="keno";
+                            undodraw[undocalc]=zero_five.getBackground();
+                            undocolor[undocalc]=null;
+
+                            zero_seven.setBackgroundResource(R.drawable.black);
+                            zero_five.setBackgroundResource(R.drawable.blacktower_black);
+                            paname[0][5] = "btower";
+                            paname[0][7] = "keno";
+
+
+                        }
                     }
 
 
@@ -465,12 +505,10 @@ public class MainActivity extends AppCompatActivity {
                     paname[Beforepanx][Beforepany]=Beforepaname;
                     paname[panx][pany]=Nowpaname;
                     nextColor=Beforecolor;
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                         NowID.setBackground(nowbackzz);
                         BeforeID.setBackground(backz);
+
                     }
-                    }
-                //rouakingb=false;
 
                 }
 
@@ -490,18 +528,17 @@ public class MainActivity extends AppCompatActivity {
                         vib.vibrate(1000);
                         undocalc=undocalc+1;
 
-                        //
+
                     } else {
                         undocalc=undocalc-1;
                         vib.vibrate(400);
                         paname[Beforepanx][Beforepany] = Beforepaname;
                         paname[panx][pany] = Nowpaname;
                         nextColor = Beforecolor;
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                             NowID.setBackground(nowbackzz);
                             BeforeID.setBackground(backz);
-                        }
-                        //rouakingw = false;
+
+
                     }
                 }
 
@@ -1049,8 +1086,7 @@ public class MainActivity extends AppCompatActivity {
                 pan[panx+1][pany-1]=true;}
 
             } else if(panx==7){
-                bsoldtop=true;
-                // Fragment up
+                callbDiaolog();
 
             } else {
 
@@ -1079,7 +1115,7 @@ public class MainActivity extends AppCompatActivity {
                     pan[panx-1][pany-1]=true;}
 
             } else if(panx==0){
-                wsoldtop=true;
+                callwDiaolog();
 
             }
             else {
@@ -2306,6 +2342,12 @@ if(color=="black") {
                 }
             }}
 
+        if((panx==0)&&(pany==4)){
+            if((paname[0][5]=="keno")&&(paname[0][6]=="keno")&&((paname[0][7]=="btower"))){
+                pan[0][6]=true;
+            }
+        }
+
     } else if (color=="white"){
 
             if((panx-1>=0)&&(panx-1<=7)){
@@ -2380,6 +2422,11 @@ if(color=="black") {
                     }
                 }}
 
+            if((panx==7)&&(pany==4)){
+                if((paname[7][5]=="keno")&&(paname[7][6]=="keno")&&((paname[7][7]=="wtower"))){
+                    pan[7][6]=true;
+                }}
+
         }
     }
 
@@ -2407,13 +2454,8 @@ if(color=="black") {
                 pany=y;
 
                 if(paname[x][y]=="wsold"){
-                    if (wsoldtop==false){
                     soldpan();}
-                    else{
-                        callwDiaolog();
-                        wsoldtop=false;
-                    }
-                }
+
                 if(paname[x][y]=="wtower"){
                     towerpan();
                 }
@@ -2482,14 +2524,7 @@ if(color=="black") {
                 pany=y;
 
                 if(paname[x][y]=="bsold"){
-
-                    if (bsoldtop==false){
-                        soldpan();}
-                    else{
-                        callbDiaolog();
-                        bsoldtop=false;
-                    }
-                }
+                    soldpan();}
                 if(paname[x][y]=="btower"){
                     towerpan();
                 }
@@ -2562,7 +2597,6 @@ if(color=="black") {
     }
 
     public void undomove(View view) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
 
         if((undocalc==1)||(undocalc==0)||(undocalc%2!=0)){
             vib.vibrate(500);
@@ -2592,11 +2626,6 @@ if(color=="black") {
             undocalc=undocalc-2;
         }
 
-
-    }
-        else{
-            Toast.makeText(this, "NOT SUPPORTED ANDROID VERSION", Toast.LENGTH_SHORT).show();
-        }
     }
 
     public void undostorage(){
@@ -2617,7 +2646,8 @@ if(color=="black") {
 
     private void callwDiaolog() {
         final Dialog dialog=new Dialog(this);
-        dialog.setContentView(R.layout.w_fragment);
+        dialog.setContentView(R.layout.w_dialog);
+        dialog.setCancelable(false);
         dialog.show();
 
 
@@ -2689,7 +2719,8 @@ if(color=="black") {
 
     private void callbDiaolog() {
         final Dialog dialog=new Dialog(this);
-        dialog.setContentView(R.layout.b_fragment);
+        dialog.setContentView(R.layout.b_dialog);
+        dialog.setCancelable(false);
         dialog.show();
 
 

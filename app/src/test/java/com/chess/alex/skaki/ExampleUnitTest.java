@@ -1,4 +1,4 @@
-package com.example.alex.skaki;
+package com.chess.alex.skaki;
 
 import org.junit.Test;
 

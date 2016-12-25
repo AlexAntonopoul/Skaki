@@ -1,4 +1,4 @@
-package com.example.alex.skaki;
+package com.chess.alex.skaki;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

@@ -4,46 +4,44 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    tools:context="com.example.alex.skaki.MainActivity"
+    android:padding="@dimen/padi"
+    tools:context="com.chess.alex.skaki.MainActivity"
     android:gravity="center"
     android:orientation="vertical">
 
 
 
     <TextView
+        android:layout_marginTop="5dp"
+        android:layout_weight="0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
         android:gravity="center"
-        android:textSize="@dimen/sizeoftext"
+        android:textSize="24dp"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
         android:id="@+id/textView" />
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="20dp"
-    android:layout_marginLeft="@dimen/left_all"
-    >
+    android:layout_height="10dp"
+    android:layout_marginTop="10dp">
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="match_parent"
         android:background="@android:color/background_dark" />
 </LinearLayout>
 
     <LinearLayout
+    android:layout_weight="1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="@dimen/left_all"
         android:layout_marginTop="0dp">
 
     <ImageView
         android:layout_width="10dp"
-        android:layout_height="@dimen/button_height"
+        android:layout_height="match_parent"
         android:background="@android:color/background_dark" />
     <ImageButton
         android:layout_width="match_parent"
@@ -103,18 +101,18 @@
         android:onClick="onClickList"/>
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
 </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/left_all"        >
+        android:layout_height="wrap_content">
 
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
         <ImageButton
             android:layout_width="match_parent"
@@ -174,17 +172,17 @@
             android:onClick="onClickList"/>
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/left_all"        >
+        android:layout_height="wrap_content">
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
 
         <ImageButton
@@ -246,20 +244,20 @@
             />
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/left_all"        >
+        android:layout_height="wrap_content">
 
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark"
-            android:onClick="onClickList"/>
+            />
 
         <ImageButton
             android:layout_width="match_parent"
@@ -321,17 +319,17 @@
             android:onClick="onClickList"/>
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/left_all"        >
+        android:layout_height="wrap_content">
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
 
         <ImageButton
@@ -392,18 +390,18 @@
             android:onClick="onClickList"/>
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/left_all"        >
+        android:layout_height="wrap_content">
 
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
 
         <ImageButton
@@ -464,18 +462,18 @@
             android:onClick="onClickList"/>
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/left_all"        >
+        android:layout_height="wrap_content">
 
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
 
         <ImageButton
@@ -536,18 +534,18 @@
             android:onClick="onClickList"/>
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/left_all"
-        >
+        android:layout_height="wrap_content">
+
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
 
 
@@ -609,14 +607,14 @@
             android:onClick="onClickList"/>
         <ImageView
             android:layout_width="10dp"
-            android:layout_height="@dimen/button_height"
+            android:layout_height="match_parent"
             android:background="@android:color/background_dark" />
     </LinearLayout>
 
     <LinearLayout
+        android:layout_weight="0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/left_all"
         >
         <ImageView
             android:layout_width="match_parent"
@@ -625,7 +623,8 @@
 
     </LinearLayout>
 <LinearLayout
-    android:layout_marginTop="@dimen/buutons_bot"
+    android:layout_weight="0"
+    android:layout_marginTop="10dp"
     android:layout_gravity="center"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
