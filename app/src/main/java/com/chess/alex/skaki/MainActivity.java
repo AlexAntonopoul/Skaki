@@ -8,6 +8,7 @@ import android.os.Vibrator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -2593,7 +2594,7 @@ if(color=="black") {
     }
 
     public void exit(View view) {
-        finish();
+        callExitDialog();
     }
 
     public void undomove(View view) {
@@ -2639,10 +2640,34 @@ if(color=="black") {
 
     @Override
     public void onBackPressed() {
+     callExitDialog();
     }
 
 
+    private void callExitDialog() {
+        final Dialog dialog=new Dialog(this);
+        dialog.setContentView(R.layout.exit_dialog);
+        dialog.show();
+        dialog.setCancelable(true);
 
+        Button okb =(Button) dialog.findViewById(R.id.dialog_ok);
+        Button can =(Button) dialog.findViewById(R.id.dialog_cancel);
+
+        okb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.hide();
+                finish();
+            }
+        });
+
+        can.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.hide();
+            }
+        });
+    }
 
     private void callwDiaolog() {
         final Dialog dialog=new Dialog(this);

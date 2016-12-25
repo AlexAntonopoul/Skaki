@@ -4,7 +4,10 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/padi"
+    android:paddingLeft="@dimen/padi"
+    android:paddingRight="@dimen/padi"
+    android:paddingTop="@dimen/paditopbot"
+    android:paddingBottom="@dimen/paditopbot"
     tools:context="com.chess.alex.skaki.MainActivity"
     android:gravity="center"
     android:orientation="vertical">
@@ -626,7 +629,7 @@
     android:layout_weight="0"
     android:layout_marginTop="10dp"
     android:layout_gravity="center"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <Button
